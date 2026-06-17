@@ -896,6 +896,20 @@ classifica o risco e entrega ao seu comitê o que ele precisa para decidir, de f
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
+
+        const data = {
+          nome: form.querySelector('[name="nome"]').value,
+          email: form.querySelector('[name="email"]').value,
+          telefone: form.querySelector('[name="telefone"]').value,
+          url: window.location.href,
+        };
+
+        fetch('https://n8nwebhook.m2up.cloud/webhook/754b6e82-890b-4a44-b0ec-ebbf8a225047', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        }).catch(function () {});
+
         clearTimeout(toastTimer);
         toast.classList.add('show');
         toastTimer = setTimeout(() => toast.classList.remove('show'), 4000);
