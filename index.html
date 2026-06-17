@@ -880,6 +880,77 @@
     })();
 
     (function () {
+      // Hero: CSS keyframe animations (fill-mode: both keeps hidden state before start)
+      const heroLeft = document.querySelector('#hero .flex-1:first-child');
+      const heroRight = document.querySelector('#hero .flex-1:last-child');
+      if (heroLeft) heroLeft.classList.add('hero-anim-left');
+      if (heroRight) heroRight.classList.add('hero-anim-right');
+
+      // IntersectionObserver para elementos abaixo do fold
+      const io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+      function reveal(el, delay) {
+        el.classList.add('reveal');
+        if (delay) el.style.setProperty('--reveal-delay', delay + 'ms');
+        io.observe(el);
+      }
+
+      function revealAll(selector, stagger) {
+        document.querySelectorAll(selector).forEach(function (el, i) {
+          reveal(el, i * (stagger || 0));
+        });
+      }
+
+      // Labels de seção
+      document.querySelectorAll('span.tracking-widest').forEach(function (el) { reveal(el, 0); });
+
+      // Headings de seção
+      document.querySelectorAll('section h2').forEach(function (el) { reveal(el, 80); });
+
+      // Seção cenário: card de riscos
+      var riskCard = document.querySelector('#cenario .border.rounded-2xl');
+      if (riskCard) reveal(riskCard, 100);
+
+      // Diferenciais: cards com stagger
+      revealAll('#diferencial .grid > div', 90);
+
+      // Exigências: itens da lista
+      revealAll('#exigencias .flex.flex-col.gap-4 > div', 80);
+
+      // Processo: etapas com stagger
+      revealAll('#processo .flex-col.items-center.text-center', 80);
+
+      // Uso: itens do fluxo
+      revealAll('#uso .flex.items-start', 90);
+
+      // Plataforma: card principal
+      var platCard = document.querySelector('#plataforma .rounded-3xl');
+      if (platCard) reveal(platCard, 100);
+
+      // Benefícios: cards + card parceiro
+      revealAll('#beneficios .grid > div', 90);
+      var partnerCard = document.querySelector('#beneficios .max-w-3xl');
+      if (partnerCard) reveal(partnerCard, 0);
+
+      // Contato: card
+      var contactCard = document.querySelector('#contato .rounded-3xl');
+      if (contactCard) reveal(contactCard, 0);
+
+      // Sobre: cards
+      revealAll('#sobre .grid > div', 80);
+
+      // FAQ: itens
+      revealAll('.faq-item', 70);
+    })();
+
+    (function () {
       const logos = Array.from({ length: 25 }, (_, i) =>
         `assets/clientes/empresa-${String(i + 1).padStart(2, '0')}.png`
       );
