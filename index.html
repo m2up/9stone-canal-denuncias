@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nine Compliance – Canal de Denúncias</title>
+  <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script>
     tailwind.config = {
       theme: {
@@ -19,7 +21,8 @@
             'brand-orange': '#DD3A03',
             'navy-card-light': '#EFF3F5',
             'navy-card': '#3E5C76',
-            'navy-light-border': '#DAE1E7'
+            'navy-light-border': '#DAE1E7',
+            'orange-light': '#EF6C22'
           },
           fontFamily: {
             title: ['Plus Jakarta Sans', 'sans-serif'],
@@ -32,7 +35,870 @@
 </head>
 <body>
 
-  
+  <header class="bg-white/90 border-b border-navy-light-border h-[65px] flex justify-center backdrop-blur sticky top-0 left-0 z-10">
+    <div class="w-full max-w-7xl mx-auto flex justify-center md:justify-between items-center">
+      <img src="assets/logo.png" alt="Nine Compliance">
 
+      <a href="#contato" class="bg-brand-orange font-sans text-sm font-semibold text-white px-[24px] py-[10px] rounded-xl hover:bg-orange-light transition-colors duration-200 hidden md:block">Falar com um especialista</a>
+    </div>
+  </header>
+
+  <section id="hero" class="bg-gradient-to-b from-navy-card-light to-white md:min-h-screen flex items-center pt-12 md:pt-0 px-6 md:px-0">
+    <div class="w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row gap-12">
+      <div class="flex-1 flex flex-col items-start">
+        <h1 class="text-navy-title font-title text-3xl md:text-[44px] leading-tight font-extrabold">Canal de denúncias que transforma relatos em <span class="text-transparent bg-clip-text bg-gradient-to-br from-[#324A5D] to-[#566D81]">inteligência de risco.</span></h1>
+
+        <p class="text-base md:text-lg text-navy-text pr-20 mt-6 mb-6">A Nine Compliance recebe cada denúncia, analisa o conteúdo, classifica o risco e entrega ao seu comitê o que ele precisa para decidir, de forma rápida e segura.</p>
+
+        <div class="flex flex-col gap-3 mb-6">
+          <div class="flex gap-3 items-center">
+            <i class="text-green-500" data-lucide="circle-check-big"></i>
+            <span class="font-medium text-xs md:text-sm text-navy-title">Relatório de risco com classificação de impacto para cada caso</span>
+          </div>
+
+          <div class="flex gap-3 items-center">
+            <i class="text-green-500" data-lucide="circle-check-big"></i>
+            <span class="font-medium text-xs md:text-sm text-navy-title">Triagem por especialistas. Não algoritmo, não automação</span>
+          </div>
+
+          <div class="flex gap-3 items-center">
+            <i class="text-green-500" data-lucide="circle-check-big"></i>
+            <span class="font-medium text-xs md:text-sm text-navy-title">Recomendação de ação pronta para o seu comitê decidir</span>
+          </div>
+
+          <div class="flex gap-3 items-center">
+            <i class="text-green-500" data-lucide="circle-check-big"></i>
+            <span class="font-medium text-xs md:text-sm text-navy-title">Canal anônimo e imparcial, sem sobrecarregar seu time</span>
+          </div>
+        </div>
+
+        <a href="#contato" class="bg-brand-orange font-sans font-semibold text-white px-[32px] py-[16px] rounded-xl flex items-center gap-3 hover:bg-orange-light transition-colors duration-200">
+          <span>Falar com um especialista</span>
+          <i class="h-5" data-lucide="arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="flex-1">
+        <img src="assets/img-hero.webp" class="drop-shadow-xl">
+      </div>
+    </div>
+  </section>
+
+  <section id="empresas" class="bg-white pt-[100px] pb-[80px]">
+    <div class="w-full flex flex-col items-center">
+      <h2 class="font-title text-navy-title font-extrabold text-2xl md:text-4xl text-center md:mb-12">Empresas que confiam <br class="md:hidden">na Nine Compliance</h2>
+
+      <div class="w-full carousel-empresas"></div>
+    </div>
+  </section>
+
+  <section id="cenario" class="bg-white md:pt-[100px] pb-[80px] px-6 md:px-0">
+    <div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center">
+
+      <span class="text-xs font-semibold tracking-widest uppercase text-navy-text mb-4">O Cenário Atual</span>
+
+      <h2 class="font-title text-navy-title font-extrabold text-2xl md:text-4xl leading-tight mb-4 text-center">59% das fraudes nas empresas brasileiras são descobertas por denúncias.</h2>
+
+      <p class="text-navy-text text-base mb-10">A pergunta é: quando chegar na sua empresa, você vai estar pronto?</p>
+
+      <div class="w-full border border-navy-light-border rounded-2xl bg-navy-card-light px-10 py-8 text-left mb-10">
+        <p class="text-navy-title font-semibold text-sm mb-5">Sem um canal de denúncias estruturado, sua empresa está exposta a:</p>
+        <ul class="flex flex-col gap-3">
+          <li class="flex items-center gap-3">
+            <i class="text-brand-orange shrink-0" data-lucide="circle-x"></i>
+            <span class="text-sm text-navy-text">Passivos trabalhistas que começam como conflito interno</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="text-brand-orange shrink-0" data-lucide="circle-x"></i>
+            <span class="text-sm text-navy-text">Desvios e furtos que nunca chegam à liderança</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="text-brand-orange shrink-0" data-lucide="circle-x"></i>
+            <span class="text-sm text-navy-text">Crises reputacionais que poderiam ter sido contidas</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="text-brand-orange shrink-0" data-lucide="circle-x"></i>
+            <span class="text-sm text-navy-text">Auditorias e licitações perdidas por falta de governança estruturada</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="text-brand-orange shrink-0" data-lucide="circle-x"></i>
+            <span class="text-sm text-navy-text">Multas e sanções por descumprimento de exigências regulatórias</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-navy-text text-sm">Um canal de denúncias estratégico não serve só para receber relatos. Serve para você <br><strong class="text-navy-title font-semibold">agir antes que o problema cresça.</strong></p>
+
+    </div>
+  </section>
+
+  <section id="diferencial" class="bg-gradient-to-b from-navy-card-light to-white pt-[80px] pb-[100px] px-6 md:px-0">
+    <div class="w-full max-w-7xl mx-auto flex flex-col items-center text-center">
+
+      <span class="text-xs font-semibold tracking-widest uppercase text-navy-text mb-4">Nosso Diferencial</span>
+
+      <h2 class="font-title text-navy-title font-extrabold text-2xl md:text-4xl leading-tight mb-4 max-w-2xl">A diferença está no que acontece depois que a denúncia chega</h2>
+
+      <p class="text-navy-text text-base mb-8 md:mb-12">A maioria dos canais registra, organiza e notifica. A Nine Compliance faz diferente.</p>
+
+      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="bg-white border border-navy-light-border rounded-2xl p-7 text-left flex flex-col gap-4">
+          <div class="w-10 h-10 bg-navy-card rounded-xl flex items-center justify-center shrink-0">
+            <i class="text-white w-5 h-5" data-lucide="message-circle"></i>
+          </div>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-2">Voz segura para quem precisa falar</h3>
+            <p class="text-navy-text text-sm leading-relaxed">Canal anônimo e operado externamente, para que seus colaboradores denunciem sem medo de retaliação</p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-navy-light-border rounded-2xl p-7 text-left flex flex-col gap-4">
+          <div class="w-10 h-10 bg-navy-card rounded-xl flex items-center justify-center shrink-0">
+            <i class="text-white w-5 h-5" data-lucide="users"></i>
+          </div>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-2">Análise humana, não automação</h3>
+            <p class="text-navy-text text-sm leading-relaxed">Cada denúncia é lida e interpretada por especialistas em compliance e direito trabalhista</p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-navy-light-border rounded-2xl p-7 text-left flex flex-col gap-4">
+          <div class="w-10 h-10 bg-navy-card rounded-xl flex items-center justify-center shrink-0">
+            <i class="text-white w-5 h-5" data-lucide="file-text"></i>
+          </div>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-2">Relatório de risco completo</h3>
+            <p class="text-navy-text text-sm leading-relaxed">Enquadramento legal do caso, nível de risco e recomendação de ação</p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-navy-light-border rounded-2xl p-7 text-left flex flex-col gap-4">
+          <div class="w-10 h-10 bg-navy-card rounded-xl flex items-center justify-center shrink-0">
+            <i class="text-white w-5 h-5" data-lucide="scale"></i>
+          </div>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-2">Seu comitê decide, não investiga</h3>
+            <p class="text-navy-text text-sm leading-relaxed">A triagem e a análise são nossas. Seu time foca na decisão</p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-navy-light-border rounded-2xl p-7 text-left flex flex-col gap-4">
+          <div class="w-10 h-10 bg-navy-card rounded-xl flex items-center justify-center shrink-0">
+            <i class="text-white w-5 h-5" data-lucide="history"></i>
+          </div>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-2">Histórico estruturado e auditável</h3>
+            <p class="text-navy-text text-sm leading-relaxed">Cada caso documentado e rastreável para auditorias e certificações</p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-navy-light-border rounded-2xl p-7 text-left flex flex-col gap-4">
+          <div class="w-10 h-10 bg-navy-card rounded-xl flex items-center justify-center shrink-0">
+            <i class="text-white w-5 h-5" data-lucide="lock"></i>
+          </div>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-2">Conformidade com LGPD</h3>
+            <p class="text-navy-text text-sm leading-relaxed">Segurança de dados e governança documentada desde o primeiro relato</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="exigencias" class="bg-white pt-0 md:pt-[80px] pb-[80px] px-6 md:px-0">
+    <div class="w-full max-w-4xl mx-auto">
+      <div class="bg-navy-card rounded-3xl px-6 md:px-12 py-8 md:py-10 flex flex-col items-center">
+
+        <h2 class="font-title text-white font-extrabold text-2xl md:text-3xl text-center mb-8">Sua empresa já se enquadra nessas exigências?</h2>
+
+        <div class="w-full flex flex-col gap-4 mb-8">
+          <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 bg-white/10 rounded-xl px-5 py-4">
+            <span class="self-start shrink-0 text-xs font-semibold text-white bg-white/15 rounded-full px-3 py-1 whitespace-nowrap">Lei 14.457/2022</span>
+            <p class="text-white/90 text-sm leading-relaxed">Exige canais de prevenção e combate ao assédio para empresas com CIPA</p>
+          </div>
+
+          <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 bg-white/10 rounded-xl px-5 py-4">
+            <span class="self-start md:self-auto shrink-0 text-xs font-semibold text-white bg-white/15 rounded-full px-3 py-1 whitespace-nowrap">Decreto 12.304/2024</span>
+            <p class="text-white/90 text-sm leading-relaxed">Obriga programa de integridade — incluindo canal de denúncias — para contratos com o governo federal</p>
+          </div>
+
+          <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 bg-white/10 rounded-xl px-5 py-4">
+            <span class="self-start shrink-0 text-xs font-semibold text-white bg-white/15 rounded-full px-3 py-1 whitespace-nowrap">NR-01</span>
+            <p class="text-white/90 text-sm leading-relaxed">Exige identificação e gestão de riscos psicossociais, incluindo canais de escuta ativa</p>
+          </div>
+
+          <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 bg-white/10 rounded-xl px-5 py-4">
+            <span class="self-start shrink-0 text-xs font-semibold text-white bg-white/15 rounded-full px-3 py-1 whitespace-nowrap">LGPD</span>
+            <p class="text-white/90 text-sm leading-relaxed">Impõe governança de dados em todo o processo de recebimento e gestão de relatos</p>
+          </div>
+        </div>
+
+        <a href="#contato" class="bg-white font-sans font-semibold text-navy-card text-sm px-7 py-3 rounded-xl flex items-center gap-2 hover:bg-navy-card-light transition-colors">
+          <span>Quero verificar se minha empresa está em conformidade</span>
+          <i class="w-4 h-4" data-lucide="arrow-right"></i>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="processo" class="bg-gradient-to-b from-navy-card-light to-white py-[80px] px-6 md:px-0">
+    <div class="w-full max-w-7xl mx-auto flex flex-col items-center text-center">
+
+      <span class="text-xs font-semibold tracking-widest uppercase text-navy-text mb-4">Como Funciona</span>
+
+      <h2 class="font-title text-navy-title font-extrabold text-2xl md:text-4xl leading-tight mb-8 md:mb-16">Implementação simples, sem burocracia interna</h2>
+
+      <div class="w-full flex flex-col gap-6 md:grid md:grid-cols-5 md:gap-6">
+
+        <div class="flex flex-col items-center text-center gap-4">
+          <div class="relative">
+            <div class="w-14 h-14 bg-navy-card rounded-2xl flex items-center justify-center">
+              <i class="text-white w-6 h-6" data-lucide="monitor"></i>
+            </div>
+            <span class="absolute -top-2 -right-2 w-5 h-5 bg-brand-orange rounded-full text-white text-[10px] font-bold flex items-center justify-center">1</span>
+          </div>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-1">Criação do seu Portal</h3>
+            <p class="text-navy-text text-xs leading-relaxed">Portal customizado e seguro, com a identidade da sua empresa</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 md:contents">
+
+          <div class="flex flex-col items-center text-center gap-4">
+            <div class="relative">
+              <div class="w-14 h-14 bg-navy-card rounded-2xl flex items-center justify-center">
+                <i class="text-white w-6 h-6" data-lucide="radio"></i>
+              </div>
+              <span class="absolute -top-2 -right-2 w-5 h-5 bg-brand-orange rounded-full text-white text-[10px] font-bold flex items-center justify-center">2</span>
+            </div>
+            <div>
+              <h3 class="font-title font-bold text-navy-title text-sm mb-1">Abertura dos canais</h3>
+              <p class="text-navy-text text-xs leading-relaxed">Site, e-mail ou telefone conforme sua necessidade</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center text-center gap-4">
+            <div class="relative">
+              <div class="w-14 h-14 bg-navy-card rounded-2xl flex items-center justify-center">
+                <i class="text-white w-6 h-6" data-lucide="users"></i>
+              </div>
+              <span class="absolute -top-2 -right-2 w-5 h-5 bg-brand-orange rounded-full text-white text-[10px] font-bold flex items-center justify-center">3</span>
+            </div>
+            <div>
+              <h3 class="font-title font-bold text-navy-title text-sm mb-1">Apoio ao comitê</h3>
+              <p class="text-navy-text text-xs leading-relaxed">Auxiliamos na estrutura de quem vai tomar as decisões</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center text-center gap-4">
+            <div class="relative">
+              <div class="w-14 h-14 bg-navy-card rounded-2xl flex items-center justify-center">
+                <i class="text-white w-6 h-6" data-lucide="rocket"></i>
+              </div>
+              <span class="absolute -top-2 -right-2 w-5 h-5 bg-brand-orange rounded-full text-white text-[10px] font-bold flex items-center justify-center">4</span>
+            </div>
+            <div>
+              <h3 class="font-title font-bold text-navy-title text-sm mb-1">Lançamento</h3>
+              <p class="text-navy-text text-xs leading-relaxed">Apoiamos a comunicação do canal para todos os colaboradores</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center text-center gap-4">
+            <div class="relative">
+              <div class="w-14 h-14 bg-navy-card rounded-2xl flex items-center justify-center">
+                <i class="text-white w-6 h-6" data-lucide="heart"></i>
+              </div>
+              <span class="absolute -top-2 -right-2 w-5 h-5 bg-brand-orange rounded-full text-white text-[10px] font-bold flex items-center justify-center">5</span>
+            </div>
+            <div>
+              <h3 class="font-title font-bold text-navy-title text-sm mb-1">Cultura Ética</h3>
+              <p class="text-navy-text text-xs leading-relaxed">Ações contínuas para manter o canal ativo e com credibilidade</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="uso" class="bg-white md:py-[80px] px-6 md:px-0">
+    <div class="w-full max-w-3xl mx-auto flex flex-col items-center text-center">
+
+      <span class="text-xs font-semibold tracking-widest uppercase text-navy-text mb-4">Do Relato à Decisão</span>
+
+      <h2 class="font-title text-navy-title font-extrabold text-2xl md:text-4xl leading-tight mb-8 md:mb-12">Como a Nine Compliance transforma cada denúncia em inteligência de risco</h2>
+
+      <div class="w-full max-w-md flex flex-col gap-4 mb-10">
+
+        <div class="flex items-start gap-4 bg-navy-card-light border border-navy-light-border rounded-2xl px-6 py-5 text-left">
+          <div class="w-10 h-10 bg-brand-orange rounded-xl flex items-center justify-center shrink-0">
+            <i class="text-white w-5 h-5" data-lucide="send"></i>
+          </div>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-1">Envio da denúncia</h3>
+            <p class="text-navy-text text-sm leading-relaxed">Colaboradores registram relatos de forma segura e anônima, através do site, whatsapp ou telefone.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-navy-card-light border border-navy-light-border rounded-2xl px-6 py-5 text-left">
+          <div class="w-10 h-10 bg-brand-orange rounded-xl flex items-center justify-center shrink-0">
+            <i class="text-white w-5 h-5" data-lucide="filter"></i>
+          </div>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-1">Triagem Humanizada</h3>
+            <p class="text-navy-text text-sm leading-relaxed">Especialistas de Nine Compliance classificam gravidade e natureza da denúncia.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-navy-card-light border border-navy-light-border rounded-2xl px-6 py-5 text-left">
+          <div class="w-10 h-10 bg-brand-orange rounded-xl flex items-center justify-center shrink-0">
+            <i class="text-white w-5 h-5" data-lucide="bar-chart-2"></i>
+          </div>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-1">Relatório de Risco</h3>
+            <p class="text-navy-text text-sm leading-relaxed">Classificação de riscos e sugestões de ação prontas.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-navy-card-light border border-navy-light-border rounded-2xl px-6 py-5 text-left">
+          <div class="w-10 h-10 bg-brand-orange rounded-xl flex items-center justify-center shrink-0">
+            <i class="text-white w-5 h-5" data-lucide="shield-check"></i>
+          </div>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-1">Resolução</h3>
+            <p class="text-navy-text text-sm leading-relaxed">Comitê decide amparado pela análise de impacto.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#contato" class="bg-brand-orange text-sm md:text-base font-sans font-semibold text-white px-8 py-4 rounded-xl flex items-center gap-2 hover:bg-orange-light transition-colors duration-200">
+        <span class="text-left">Ver um relatório de risco <br class="md:hidden">real sem compromisso</span>
+        <i class="w-4 h-4" data-lucide="arrow-right"></i>
+      </a>
+
+    </div>
+  </section>
+
+  <section id="plataforma" class="bg-white py-[100px] px-6 md:px-0">
+    <div class="w-full max-w-6xl mx-auto flex flex-col items-center">
+
+      <span class="text-xs font-semibold tracking-widest uppercase text-brand-orange mb-4">Plataforma</span>
+      <h2 class="font-title text-navy-title font-extrabold text-2xl md:text-4xl leading-tight mb-4 text-center">Conheça o sistema por dentro</h2>
+      <p class="text-navy-text text-base text-center mb-6 md:mb-12">Gestão completa de denúncias, tickets e relatórios em uma plataforma intuitiva.</p>
+
+      <div class="w-full bg-navy-card rounded-3xl pt-10 px-6 pb-24 md:py-10 md:px-10 relative overflow-hidden">
+
+        <!-- Slides wrapper -->
+        <div class="plataforma-slides overflow-hidden">
+          <div class="plataforma-track flex transition-transform duration-500 ease-in-out">
+
+            <!-- Slide 1 -->
+            <div class="plataforma-slide w-full shrink-0 flex flex-col md:flex-row gap-8 md:gap-10 items-center">
+              <div class="flex-1 flex flex-col md:pb-16">
+                <span class="text-white/50 text-xs font-medium mb-6 flex items-center gap-2">
+                  <i class="w-3 h-3" data-lucide="layout-dashboard"></i>
+                  1 de 3
+                </span>
+                <h3 class="font-title text-white font-bold text-2xl leading-tight mb-3">Dashboard do Canal de Denúncias</h3>
+                <p class="text-white/70 text-sm leading-relaxed mb-5">Visão geral em tempo real dos tickets, indicadores operacionais e categorias de denúncia.</p>
+                <ul class="flex flex-col gap-2">
+                  <li class="flex items-center gap-2 text-white/80 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-light shrink-0"></span>
+                    Indicadores em tempo real
+                  </li>
+                  <li class="flex items-center gap-2 text-white/80 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-light shrink-0"></span>
+                    Omnichannel (Website, WhatsApp e Telefone)
+                  </li>
+                  <li class="flex items-center gap-2 text-white/80 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-light shrink-0"></span>
+                    Acompanhamento de Taxa de resolução
+                  </li>
+                  <li class="flex items-center gap-2 text-white/80 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-light shrink-0"></span>
+                    Identificação da Natureza da Denúncia
+                  </li>
+                </ul>
+              </div>
+              <div class="flex-1 flex justify-end items-center">
+                <img src="assets/img-plataforma-1.webp" alt="Dashboard do Canal de Denúncias" class="rounded-xl w-full object-cover">
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="plataforma-slide w-full shrink-0 flex flex-col md:flex-row gap-8 md:gap-10 items-center">
+              <div class="flex-1 flex flex-col md:pb-16">
+                <span class="text-white/50 text-xs font-medium mb-6 flex items-center gap-2">
+                  <i class="w-3 h-3" data-lucide="layout-dashboard"></i>
+                  2 de 3
+                </span>
+                <h3 class="font-title text-white font-bold text-2xl leading-tight mb-3">Gestão e acompanhamento de tickets</h3>
+                <p class="text-white/70 text-sm leading-relaxed mb-5">VInbox unificado com todos os tickets omnichannel, filtros avançados e priorização inteligente.</p>
+                <ul class="flex flex-col gap-2">
+                  <li class="flex items-center gap-2 text-white/80 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-light shrink-0"></span>
+                    Filtros por prioridade
+                  </li>
+                  <li class="flex items-center gap-2 text-white/80 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-light shrink-0"></span>
+                    Status e Canal
+                  </li>
+                  <li class="flex items-center gap-2 text-white/80 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-light shrink-0"></span>
+                    SLA Controlado
+                  </li>
+                  <li class="flex items-center gap-2 text-white/80 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-light shrink-0"></span>
+                    Tags informativas
+                  </li>
+                </ul>
+              </div>
+              <div class="flex-1 flex justify-end items-center">
+                <img src="assets/img-plataforma-2.webp" alt="Dashboard do Canal de Denúncias" class="rounded-xl w-full object-cover">
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="plataforma-slide w-full shrink-0 flex flex-col md:flex-row gap-8 md:gap-10 items-center">
+              <div class="flex-1 flex flex-col md:pb-16">
+                <span class="text-white/50 text-xs font-medium mb-6 flex items-center gap-2">
+                  <i class="w-3 h-3" data-lucide="layout-dashboard"></i>
+                  3 de 3
+                </span>
+                <h3 class="font-title text-white font-bold text-2xl leading-tight mb-3">Relatórios de Métricas, Investigação e Risco</h3>
+                <p class="text-white/70 text-sm leading-relaxed mb-5">Relatórios completos de métricas, investigação e risco prontos para o comitê de ética.</p>
+                <ul class="flex flex-col gap-2">
+                  <li class="flex items-center gap-2 text-white/80 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-light shrink-0"></span>
+                    Entenda e compare a qualidade do ambiente empresarial
+                  </li>
+                  <li class="flex items-center gap-2 text-white/80 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-light shrink-0"></span>
+                    Investigações de uma ou mais denúncias com parecer técnico 
+                  </li>
+                  <li class="flex items-center gap-2 text-white/80 text-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-light shrink-0"></span>
+                    Análise de risco com classificação e orientações
+                  </li>
+                </ul>
+              </div>
+              <div class="flex-1 flex justify-end items-center">
+                <img src="assets/img-plataforma-3.webp" alt="Dashboard do Canal de Denúncias" class="rounded-xl h-[220px] md:h-auto w-full object-cover md:max-w-[420px]">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Navigation – posicionada sobre a coluna esquerda, fora do track -->
+        <div class="absolute bottom-10 left-10 flex items-center gap-2">
+          <button class="plataforma-prev w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
+            <i class="w-4 h-4" data-lucide="chevron-left"></i>
+          </button>
+          <button class="plataforma-next w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
+            <i class="w-4 h-4" data-lucide="chevron-right"></i>
+          </button>
+          <div class="flex gap-2 ml-2 plataforma-dots">
+            <button class="w-5 h-1.5 rounded-full bg-orange-light transition-all" data-index="0"></button>
+            <button class="w-1.5 h-1.5 rounded-full bg-white/30 transition-all" data-index="1"></button>
+            <button class="w-1.5 h-1.5 rounded-full bg-white/30 transition-all" data-index="2"></button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="beneficios" class="bg-gradient-to-b from-navy-card-light to-white py-[80px] px-6 md:px-0">
+    <div class="w-full max-w-7xl mx-auto flex flex-col items-center">
+
+      <span class="text-xs font-semibold tracking-widest uppercase text-navy-text mb-4">Benefícios</span>
+
+      <h2 class="font-title text-navy-title font-extrabold text-2xl md:text-4xl leading-tight mb-8 md:mb-12">Benefícios para sua empresa</h2>
+
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+
+        <div class="bg-white border border-navy-light-border rounded-2xl p-8">
+          <h3 class="font-title font-bold text-navy-title text-xl mb-5">Para o seu time de RH</h3>
+          <ul class="flex flex-col gap-3">
+            <li class="flex items-center gap-3 text-sm text-navy-text">
+              <i class="text-green-500 shrink-0 w-5 h-5" data-lucide="circle-check-big"></i>
+              Menos sobrecarga operacional: triagem e análise feitas pela Nine
+            </li>
+            <li class="flex items-center gap-3 text-sm text-navy-text">
+              <i class="text-green-500 shrink-0 w-5 h-5" data-lucide="circle-check-big"></i>
+              Imparcialidade garantida: canal operado externamente
+            </li>
+            <li class="flex items-center gap-3 text-sm text-navy-text">
+              <i class="text-green-500 shrink-0 w-5 h-5" data-lucide="circle-check-big"></i>
+              Facilidade de operação: plataforma intuitiva e implementação assistida
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-navy-light-border rounded-2xl p-8">
+          <h3 class="font-title font-bold text-navy-title text-xl mb-5">Para o seu Compliance Officer</h3>
+          <ul class="flex flex-col gap-3">
+            <li class="flex items-center gap-3 text-sm text-navy-text">
+              <i class="text-green-500 shrink-0 w-5 h-5" data-lucide="circle-check-big"></i>
+              Relatório pronto para o comitê com análise de risco e recomendação
+            </li>
+            <li class="flex items-center gap-3 text-sm text-navy-text">
+              <i class="text-green-500 shrink-0 w-5 h-5" data-lucide="circle-check-big"></i>
+              Histórico auditável e organizado: cada caso documentado
+            </li>
+            <li class="flex items-center gap-3 text-sm text-navy-text">
+              <i class="text-green-500 shrink-0 w-5 h-5" data-lucide="circle-check-big"></i>
+              Conformidade documentada: LGPD e exigências regulatórias cobertas
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="max-w-3xl w-full bg-white border border-navy-light-border rounded-2xl px-6 md:px-12 py-8 flex flex-col items-center text-center">
+        <h3 class="font-title font-bold text-navy-title text-xl mb-8">Mais do que um fornecedor, você ganha um parceiro</h3>
+        <div class="flex flex-col md:flex-row gap-6 w-full">
+          <div class="flex-1 flex flex-col items-center gap-3">
+            <div class="w-10 h-10 bg-navy-card-light rounded-xl flex items-center justify-center">
+              <i class="text-navy-text w-5 h-5" data-lucide="clock"></i>
+            </div>
+            <p class="text-sm text-navy-text leading-snug">Disponibilidade 24/7: suporte e resposta ágil</p>
+          </div>
+          <div class="flex-1 flex flex-col items-center gap-3">
+            <div class="w-10 h-10 bg-navy-card-light rounded-xl flex items-center justify-center">
+              <i class="text-navy-text w-5 h-5" data-lucide="heart"></i>
+            </div>
+            <p class="text-sm text-navy-text leading-snug">Relacionamento próximo: acompanhamos sua evolução</p>
+          </div>
+          <div class="flex-1 flex flex-col items-center gap-3">
+            <div class="w-10 h-10 bg-navy-card-light rounded-xl flex items-center justify-center">
+              <i class="text-navy-text w-5 h-5" data-lucide="headphones"></i>
+            </div>
+            <p class="text-sm text-navy-text leading-snug">Atendimento especialista e humanizado</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contato" class="bg-white pt-0 md:pt-[50px] pb-[80px] px-6 md:px-0">
+    <div class="w-full max-w-[960px] mx-auto">
+
+      <div class="bg-navy-card rounded-3xl px-6 md:px-16 py-10 md:py-14 flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+
+        <div class="flex-1">
+          <span class="text-xs font-semibold tracking-widest uppercase text-white/50 mb-4 block">Fale Conosco</span>
+          <h2 class="font-title text-white font-extrabold text-2xl md:text-3xl leading-tight mb-4">Quero ver como funciona na prática</h2>
+          <p class="text-white/70 text-sm leading-relaxed">Agende uma demonstração.<br>Preencha o formulário e um especialista entrará em contato.</p>
+        </div>
+
+        <form class="flex-1 flex flex-col gap-4 w-full">
+          <div class="flex flex-col gap-1.5">
+            <label class="text-white text-sm font-medium">Nome Completo</label>
+            <input type="text" placeholder="Digite seu nome" class="w-full bg-white rounded-xl px-4 py-4 text-sm text-navy-title placeholder:text-navy-text/60 outline-none focus:ring-2 focus:ring-white/40">
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="text-white text-sm font-medium">E-mail empresarial</label>
+            <input type="email" placeholder="Digite seu e-mail" class="w-full bg-white rounded-xl px-4 py-4 text-sm text-navy-title placeholder:text-navy-text/60 outline-none focus:ring-2 focus:ring-white/40">
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="text-white text-sm font-medium">Telefone</label>
+            <input type="tel" id="telefone" placeholder="(__) _____-____" maxlength="16" class="w-full bg-white rounded-xl px-4 py-4 text-sm text-navy-title placeholder:text-navy-text/60 outline-none focus:ring-2 focus:ring-white/40">
+          </div>
+
+          <button type="submit" class="w-full bg-white font-sans font-semibold text-navy-card text-sm py-4 rounded-xl hover:bg-navy-card-light transition-colors mt-1">Enviar</button>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sobre" class="bg-gradient-to-b from-navy-card-light to-white py-[80px] px-6 md:px-0">
+    <div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center">
+
+      <span class="text-xs font-semibold tracking-widest uppercase text-navy-text mb-4">Sobre Nós</span>
+
+      <h2 class="font-title text-navy-title font-extrabold text-2xl md:text-4xl leading-tight mb-4">Quem está por trás da Nine Compliance</h2>
+
+      <p class="text-navy-text text-base mb-8 md:mb-12 max-w-xl">A Nine Compliance nasceu da experiência de profissionais que atuaram por mais de uma década nos bastidores das organizações. Somos uma consultoria especializada em integridade corporativa.</p>
+
+      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-white border border-navy-light-border rounded-2xl p-6 text-left flex flex-col gap-3">
+          <i class="text-navy-text w-6 h-6" data-lucide="lock"></i>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-1">LGPD e privacidade de dados</h3>
+            <p class="text-navy-text text-xs leading-relaxed">Mapeamento, adequação, gestão de riscos e DPO as a Service</p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-navy-light-border rounded-2xl p-6 text-left flex flex-col gap-3">
+          <i class="text-navy-text w-6 h-6" data-lucide="shield"></i>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-1">Blindagem jurídica e contratual</h3>
+            <p class="text-navy-text text-xs leading-relaxed">Revisão de contratos e políticas para reduzir exposição</p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-navy-light-border rounded-2xl p-6 text-left flex flex-col gap-3">
+          <i class="text-navy-text w-6 h-6" data-lucide="search"></i>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-1">Investigação de denúncias</h3>
+            <p class="text-navy-text text-xs leading-relaxed">Condução imparcial de apurações internas</p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-navy-light-border rounded-2xl p-6 text-left flex flex-col gap-3">
+          <i class="text-navy-text w-6 h-6" data-lucide="book-open"></i>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-1">Compliance estruturado</h3>
+            <p class="text-navy-text text-xs leading-relaxed">Programa completo de integridade com os 9 pilares</p>
+          </div>
+        </div>
+
+        <div class="bg-white border border-navy-light-border rounded-2xl p-6 text-left flex flex-col gap-3">
+          <i class="text-navy-text w-6 h-6" data-lucide="layout-grid"></i>
+          <div>
+            <h3 class="font-title font-bold text-navy-title text-sm mb-1">Consolidação de governança</h3>
+            <p class="text-navy-text text-xs leading-relaxed">Estruturação de comitês, políticas e processos</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="faq" class="bg-white pt-0 md:pt-[50px] pb-[80px] px-6 md:px-0">
+    <div class="w-full max-w-3xl mx-auto flex flex-col items-center">
+
+      <span class="text-xs font-semibold tracking-widest uppercase text-navy-text mb-4">FAQ</span>
+
+      <h2 class="font-title text-navy-title font-extrabold text-2xl md:text-4xl leading-tight mb-8 md:mb-12 text-center">Dúvidas? Veja se estão respondidas aqui</h2>
+
+      <div class="w-full flex flex-col gap-3" id="faq-list">
+
+        <div class="faq-item border border-navy-light-border rounded-2xl overflow-hidden">
+          <button class="faq-trigger w-full flex justify-between items-center px-7 py-5 text-left" aria-expanded="false">
+            <span class="font-sans font-medium text-sm text-navy-title">Como é garantida a confidencialidade do denunciante?</span>
+            <i class="faq-chevron text-navy-text w-4 h-4 shrink-0 transition-transform duration-300" data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-body hidden px-7 pb-5">
+            <p class="text-sm text-navy-text leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies leo a mi sagittis facilisis. Nunc vel metus eget nulla molestie cursus sit amet non metus.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-navy-light-border rounded-2xl overflow-hidden">
+          <button class="faq-trigger w-full flex justify-between items-center px-7 py-5 text-left" aria-expanded="false">
+            <span class="font-sans font-medium text-sm text-navy-title">Minha empresa já tem um canal interno. Por que contratar a Nine?</span>
+            <i class="faq-chevron text-navy-text w-4 h-4 shrink-0 transition-transform duration-300" data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-body hidden px-7 pb-5">
+            <p class="text-sm text-navy-text leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies leo a mi sagittis facilisis. Nunc vel metus eget nulla molestie cursus sit amet non metus.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-navy-light-border rounded-2xl overflow-hidden">
+          <button class="faq-trigger w-full flex justify-between items-center px-7 py-5 text-left" aria-expanded="false">
+            <span class="font-sans font-medium text-sm text-navy-title">Minha empresa é pequena. Preciso disso?</span>
+            <i class="faq-chevron text-navy-text w-4 h-4 shrink-0 transition-transform duration-300" data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-body hidden px-7 pb-5">
+            <p class="text-sm text-navy-text leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies leo a mi sagittis facilisis. Nunc vel metus eget nulla molestie cursus sit amet non metus.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-navy-light-border rounded-2xl overflow-hidden">
+          <button class="faq-trigger w-full flex justify-between items-center px-7 py-5 text-left" aria-expanded="false">
+            <span class="font-sans font-medium text-sm text-navy-title">É possível acompanhar os relatos em tempo real?</span>
+            <i class="faq-chevron text-navy-text w-4 h-4 shrink-0 transition-transform duration-300" data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-body hidden px-7 pb-5">
+            <p class="text-sm text-navy-text leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies leo a mi sagittis facilisis. Nunc vel metus eget nulla molestie cursus sit amet non metus.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-navy-light-border rounded-2xl overflow-hidden">
+          <button class="faq-trigger w-full flex justify-between items-center px-7 py-5 text-left" aria-expanded="false">
+            <span class="font-sans font-medium text-sm text-navy-title">A implementação vai demandar muito tempo?</span>
+            <i class="faq-chevron text-navy-text w-4 h-4 shrink-0 transition-transform duration-300" data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-body hidden px-7 pb-5">
+            <p class="text-sm text-navy-text leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies leo a mi sagittis facilisis. Nunc vel metus eget nulla molestie cursus sit amet non metus.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-navy-light-border rounded-2xl overflow-hidden">
+          <button class="faq-trigger w-full flex justify-between items-center px-7 py-5 text-left" aria-expanded="false">
+            <span class="font-sans font-medium text-sm text-navy-title">A plataforma se integra com meu sistema?</span>
+            <i class="faq-chevron text-navy-text w-4 h-4 shrink-0 transition-transform duration-300" data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-body hidden px-7 pb-5">
+            <p class="text-sm text-navy-text leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies leo a mi sagittis facilisis. Nunc vel metus eget nulla molestie cursus sit amet non metus.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-navy-title py-[64px] px-6 md:px-0">
+    <div class="w-full max-w-7xl mx-auto">
+
+      <div class="flex flex-col gap-8 md:grid md:grid-cols-4 md:gap-12 mb-10 md:mb-16">
+
+        <div>
+          <h4 class="font-title font-semibold text-white text-sm mb-4">Sobre Nós</h4>
+          <p class="text-white/50 text-sm leading-relaxed">A Nine Compliance foi criada com o objetivo de transformar as relações empresariais, entregando eficiência, ética e controle.</p>
+        </div>
+
+        <div>
+          <h4 class="font-title font-semibold text-white text-sm mb-4">Contato</h4>
+          <ul class="flex flex-col gap-2">
+            <li><a href="mailto:contato@ninecompliance.com.br" class="text-white/50 text-sm hover:text-white/80 transition-colors">contato@ninecompliance.com.br</a></li>
+            <li><span class="text-white/50 text-sm">Seg-Sex / 08h-19h</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-title font-semibold text-white text-sm mb-4">Serviços</h4>
+          <ul class="flex flex-col gap-2">
+            <li><a href="https://9stone.com.br/servico/2/lgpd-privacidade" target="_blank" class="text-white/50 text-sm hover:text-white/80 transition-colors">LGPD/Privacidade</a></li>
+            <li><a href="https://9stone.com.br/servico/3/compliance" target="_blank" class="text-white/50 text-sm hover:text-white/80 transition-colors">Compliance</a></li>
+            <li><a href="https://9stone.com.br/servico/4/investigacao-corporativa" target="_blank" class="text-white/50 text-sm hover:text-white/80 transition-colors">Investigação Corporativa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-title font-semibold text-white text-sm mb-4">Legal</h4>
+          <ul class="flex flex-col gap-2">
+            <li><a href="https://9stone.com.br/politica-de-privacidade" target="_blank" class="text-white/50 text-sm hover:text-white/80 transition-colors">Política de Privacidade</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-8">
+        <p class="text-white/40 text-sm text-left md:text-center">© 2026 Nine Compliance. <br class="md:hidden">Todos os direitos reservados.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    Mensagem enviada com sucesso! Em breve um especialista entrará em contato.
+  </div>
+
+  <script>
+    // Carrossel Plataforma
+    (function () {
+      const track = document.querySelector('.plataforma-track');
+      const slides = document.querySelectorAll('.plataforma-slide');
+      const dots = document.querySelectorAll('.plataforma-dots button');
+      const total = slides.length;
+      let current = 0;
+
+      function goTo(index) {
+        current = (index + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((dot, i) => {
+          if (i === current) {
+            dot.classList.add('bg-orange-light', 'w-6');
+            dot.classList.remove('bg-white/30', 'w-3');
+          } else {
+            dot.classList.remove('bg-orange-light', 'w-6');
+            dot.classList.add('bg-white/30', 'w-3');
+          }
+        });
+      }
+
+      document.querySelector('.plataforma-prev').addEventListener('click', () => goTo(current - 1));
+      document.querySelector('.plataforma-next').addEventListener('click', () => goTo(current + 1));
+      dots.forEach(dot => dot.addEventListener('click', () => goTo(Number(dot.dataset.index))));
+    })();
+
+    lucide.createIcons();
+
+    (function () {
+      document.querySelectorAll('.faq-trigger').forEach(trigger => {
+        trigger.addEventListener('click', function () {
+          const item = this.closest('.faq-item');
+          const body = item.querySelector('.faq-body');
+          const chevron = item.querySelector('.faq-chevron');
+          const isOpen = !body.classList.contains('hidden');
+
+          document.querySelectorAll('.faq-item').forEach(other => {
+            other.querySelector('.faq-body').classList.add('hidden');
+            other.querySelector('.faq-chevron').style.transform = '';
+            other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isOpen) {
+            body.classList.remove('hidden');
+            chevron.style.transform = 'rotate(180deg)';
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    })();
+
+    (function () {
+      const form = document.querySelector('#contato form');
+      const toast = document.getElementById('toast');
+      let toastTimer;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        clearTimeout(toastTimer);
+        toast.classList.add('show');
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 4000);
+      });
+    })();
+
+    (function () {
+      const tel = document.getElementById('telefone');
+      tel.addEventListener('input', function (e) {
+        let digits = e.target.value.replace(/\D/g, '').slice(0, 11);
+        let masked = '';
+        if (digits.length > 0) masked = '(' + digits.slice(0, 2);
+        if (digits.length >= 3) masked += ') ' + digits.slice(2, 7);
+        if (digits.length >= 8) masked += '-' + digits.slice(7, 11);
+        e.target.value = masked;
+      });
+    })();
+
+    (function () {
+      const logos = Array.from({ length: 25 }, (_, i) =>
+        `assets/clientes/empresa-${String(i + 1).padStart(2, '0')}.png`
+      );
+
+      const container = document.querySelector('.carousel-empresas');
+      const track = document.createElement('div');
+      track.className = 'carousel-track';
+
+      // duplica para loop contínuo
+      [...logos, ...logos].forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = '';
+        img.draggable = false;
+        track.appendChild(img);
+      });
+
+      container.appendChild(track);
+    })();
+  </script>
 </body>
 </html>
