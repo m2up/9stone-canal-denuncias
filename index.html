@@ -39,11 +39,11 @@
     <div class="w-full max-w-7xl mx-auto flex justify-center md:justify-between items-center">
       <img src="assets/logo.png" alt="Nine Compliance">
 
-      <a href="#contato" class="bg-brand-orange font-sans text-sm font-semibold text-white px-[24px] py-[10px] rounded-xl hover:bg-orange-light transition-colors duration-200 hidden md:block">Falar com um especialista</a>
+      <a href="https://api.whatsapp.com/send/?phone=5524999590693&text=Oi! Quero saber mais sobre o Canal de Denúncias da Nine Compliance&type=phone_number&app_absent=0" target="_blank" class="bg-brand-orange font-sans text-sm font-semibold text-white px-[24px] py-[10px] rounded-xl hover:bg-orange-light transition-colors duration-200 hidden md:block">Falar com um especialista</a>
     </div>
   </header>
 
-  <section id="hero" class="bg-gradient-to-b from-navy-card-light to-white md:min-h-screen flex items-center pt-12 md:pt-0 px-6 md:px-0">
+  <section id="hero" class="bg-gradient-to-b from-navy-card-light to-white flex items-center pt-12 min-[1360px]:py-20 min-[1681px]:py-28 px-6 md:px-0">
     <div class="w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row gap-5 md:gap-0">
       <div class="flex-1 flex flex-col items-start">
         <h1 class="text-navy-title font-title text-3xl md:text-[49px] leading-tight md:leading-[55px] font-extrabold">Canal de denúncias que transforma relatos em <span class="text-transparent bg-clip-text bg-gradient-to-br from-[#324A5D] to-[#566D81]">inteligência de risco.</span></h1>
@@ -73,7 +73,7 @@ classifica o risco e entrega ao seu comitê o que ele precisa para decidir, de f
           </div>
         </div>
 
-        <a href="#contato" class="bg-brand-orange font-sans font-semibold text-white px-[32px] py-[16px] rounded-xl flex items-center gap-3 hover:bg-orange-light transition-colors duration-200">
+        <a href="https://api.whatsapp.com/send/?phone=5524999590693&text=Oi! Quero saber mais sobre o Canal de Denúncias da Nine Compliance&type=phone_number&app_absent=0" target="_blank" class="bg-brand-orange font-sans font-semibold text-white px-[32px] py-[16px] rounded-xl flex items-center gap-3 hover:bg-orange-light transition-colors duration-200">
           <span>Falar com um especialista</span>
           <i class="h-5" data-lucide="arrow-right"></i>
         </a>
@@ -85,9 +85,9 @@ classifica o risco e entrega ao seu comitê o que ele precisa para decidir, de f
     </div>
   </section>
 
-  <section id="empresas" class="bg-white pt-[100px] pb-[80px]">
+  <section id="empresas" class="bg-white pt-[100px] md:pt-0 pb-[80px]">
     <div class="w-full flex flex-col items-center">
-      <h2 class="font-title text-navy-title font-extrabold text-2xl md:text-4xl text-center md:mb-12">Empresas que confiam <br class="md:hidden">na Nine Compliance</h2>
+      <h3 class="font-title text-navy-title font-extrabold text-2xl md:text-4xl text-center md:mb-12">Empresas que confiam <br class="md:hidden">na Nine Compliance</h3>
 
       <div class="w-full carousel-empresas"></div>
     </div>
@@ -235,7 +235,7 @@ classifica o risco e entrega ao seu comitê o que ele precisa para decidir, de f
           </div>
         </div>
 
-        <a href="#contato" class="bg-white font-sans font-semibold text-navy-card text-sm md:text-base px-7 py-3 rounded-xl flex items-center gap-2 hover:bg-navy-card-light transition-colors">
+        <a href="https://api.whatsapp.com/send/?phone=5524999590693&text=Oi! Quero saber mais sobre o Canal de Denúncias da Nine Compliance&type=phone_number&app_absent=0" target="_blank" class="bg-white font-sans font-semibold text-navy-card text-sm md:text-base px-7 py-3 rounded-xl flex items-center gap-2 hover:bg-navy-card-light transition-colors">
           <span>Quero verificar se minha empresa está em conformidade</span>
           <i class="w-4 h-4" data-lucide="arrow-right"></i>
         </a>
@@ -378,7 +378,7 @@ classifica o risco e entrega ao seu comitê o que ele precisa para decidir, de f
       </div>
 
       <a href="#contato" class="bg-brand-orange text-sm md:text-base font-sans font-semibold text-white px-8 py-4 rounded-xl flex items-center gap-2 hover:bg-orange-light transition-colors duration-200">
-        <span class="text-left">Ver um relatório de risco <br class="md:hidden">real sem compromisso</span>
+        <span class="text-left">Quero saber sobre o canal de denúncias</span>
         <i class="w-4 h-4" data-lucide="arrow-right"></i>
       </a>
 
@@ -637,18 +637,18 @@ classifica o risco e entrega ao seu comitê o que ele precisa para decidir, de f
 
         <form class="flex-1 flex flex-col gap-4 w-full">
           <div class="flex flex-col gap-1.5">
-            <label class="text-white text-sm font-medium">Nome Completo</label>
-            <input type="text" placeholder="Digite seu nome" class="w-full bg-white rounded-xl px-4 py-4 text-sm text-navy-title placeholder:text-navy-text/60 outline-none focus:ring-2 focus:ring-white/40">
+            <label for="nome" class="text-white text-sm font-medium">Nome Completo</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" class="w-full bg-white rounded-xl px-4 py-4 text-sm text-navy-title placeholder:text-navy-text/60 outline-none focus:ring-2 focus:ring-white/40">
           </div>
 
           <div class="flex flex-col gap-1.5">
-            <label class="text-white text-sm font-medium">E-mail empresarial</label>
-            <input type="email" placeholder="Digite seu e-mail" class="w-full bg-white rounded-xl px-4 py-4 text-sm text-navy-title placeholder:text-navy-text/60 outline-none focus:ring-2 focus:ring-white/40">
+            <label for="email" class="text-white text-sm font-medium">E-mail empresarial</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" class="w-full bg-white rounded-xl px-4 py-4 text-sm text-navy-title placeholder:text-navy-text/60 outline-none focus:ring-2 focus:ring-white/40">
           </div>
 
           <div class="flex flex-col gap-1.5">
-            <label class="text-white text-sm font-medium">Telefone</label>
-            <input type="tel" id="telefone" placeholder="(__) _____-____" maxlength="16" class="w-full bg-white rounded-xl px-4 py-4 text-sm text-navy-title placeholder:text-navy-text/60 outline-none focus:ring-2 focus:ring-white/40">
+            <label for="telefone" class="text-white text-sm font-medium">Telefone</label>
+            <input type="tel" name="telefone" id="telefone" placeholder="(__) _____-____" maxlength="16" class="w-full bg-white rounded-xl px-4 py-4 text-sm text-navy-title placeholder:text-navy-text/60 outline-none focus:ring-2 focus:ring-white/40">
           </div>
 
           <button type="submit" class="w-full bg-white font-sans font-semibold text-navy-card text-sm py-4 rounded-xl hover:bg-navy-card-light transition-colors mt-1">Enviar</button>
